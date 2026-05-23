@@ -2,7 +2,7 @@ pipeline {
  agent any
  environment {
  // CHANGE THIS: replace 'yourusername' with your Docker Hub username
- IMAGE_NAME = 'yourusername/devops-jenkins-demo'
+ IMAGE_NAME = 'pranavmehta95/devops-jenkins-demo'
  IMAGE_TAG = "${IMAGE_NAME}:${env.GIT_COMMIT[0..6]}"
  LATEST_TAG = "${IMAGE_NAME}:latest"
  DOCKERHUB_CRED = 'dockerhub-credentials'
@@ -41,8 +41,7 @@ sh 'mvn package -DskipTests -q'
  credentialsId: "${DOCKERHUB_CRED}",
 usernameVariable: 'DOCKER_USER',
 passwordVariable: 'DOCKER_TOKEN')]) {
-sh 'echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --
-password-stdin'
+sh 'echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin'
  sh "docker push ${IMAGE_TAG}"
 sh "docker push ${LATEST_TAG}"
 sh 'docker logout'
