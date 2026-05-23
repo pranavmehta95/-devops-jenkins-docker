@@ -1,5 +1,8 @@
 pipeline {
  agent any
+ tools {
+ maven 'Maven-3'
+}
  environment {
  // CHANGE THIS: replace 'yourusername' with your Docker Hub username
  IMAGE_NAME = 'pranavmehta95/devops-jenkins-demo'
