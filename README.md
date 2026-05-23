@@ -1,4 +1,6 @@
+# CI/CD Pipeline — Jenkins + Docker
 Spring Boot application with automated CI/CD using Jenkins and Docker.
+## Pipeline Stages
 1. Checkout source code from GitHub
 2. Build & test with Maven (quality gate)
 3. Build Docker image (multi-stage)
