@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 @RestController
 public class HelloController {
- @GetMapping("/")
+ @GetMapping("/api/status")
  public Map<String, String> home() {
  return Map.of(
  "message", "CI/CD Pipeline is working!",
