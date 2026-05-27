@@ -4,7 +4,7 @@ pipeline {
  maven 'Maven-3'
 }
  environment {
- // CHANGE THIS: replace 'yourusername' with your Docker Hub username
+ 
  IMAGE_NAME = 'pranavmehta192/devops-jenkins-demo'
  IMAGE_TAG = "${IMAGE_NAME}:${env.GIT_COMMIT[0..6]}"
  LATEST_TAG = "${IMAGE_NAME}:latest"
