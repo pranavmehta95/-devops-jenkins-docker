@@ -9,6 +9,6 @@ Spring Boot application with automated CI/CD using Jenkins and Docker.
 ## Run Locally
 cd app && mvn spring-boot:run
 ## Health Check
-curl http://localhost:8080/health
+http://127.0.0.1:8080/health/
 ## Live Demo
 https://devops-jenkins-docker.onrender.com
